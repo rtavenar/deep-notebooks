@@ -1,5 +1,9 @@
 .DS_Store
 cats_and_dogs/
 vaihingen-cropped/
+vaihingen-cropped-small/
 kangaroo.jpg
 model*.hdf5
+vaihingen_unet*
+*.zip
+unet_*.h5
