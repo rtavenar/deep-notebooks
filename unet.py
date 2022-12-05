@@ -66,8 +66,7 @@ def double_conv2d(output_channels):
         ReLU(),
         Conv2D(filters=output_channels, kernel_size=3, padding="same"),
         BatchNormalization(),
-        ReLU(),
-        Dropout(0.1)
+        ReLU()
     ])
 
 def down_sampling_block(output_channels):
@@ -137,13 +136,12 @@ class VaihingenDataset(tf.keras.utils.Sequence):
             y.append(np.load(path.replace(".png", "_gt.npy")))
         x = np.array(x)
         y = to_categorical(np.array(y), num_classes=N_CLASSES)
-        # print(x.shape, self.normalization_means[None, None, None, :].shape)
-        # x -= self.normalization_means[None, None, None, :]
-        # x /= self.normalization_stds[None, None, None, :]
+        x -= self.normalization_means[None, None, None, :]
+        x /= self.normalization_stds[None, None, None, :]
         return x, y
 
 train_loader = VaihingenDataset(batch_size=4, folder="vaihingen-cropped/vaihingen_train/")
-val_loader = VaihingenDataset(batch_size=4, folder="vaihingen-cropped-small/vaihingen_test/")
+val_loader = VaihingenDataset(batch_size=4, folder="vaihingen-cropped/vaihingen_test/")
 
 
 model = unet_model(image_size=(512, 512), n_classes=N_CLASSES)
