@@ -5,6 +5,5 @@ vaihingen-cropped-small/
 kangaroo.jpg
 model*.hdf5
 vaihingen_unet*
-*.zip
 unet_*.h5
 pretrained_unet.h5
