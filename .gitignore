@@ -7,3 +7,5 @@ model*.hdf5
 vaihingen_unet*
 unet_*.h5
 pretrained_unet.h5
+__MACOSX
+.ipynb_checkpoints/
