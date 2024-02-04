@@ -6,7 +6,7 @@ TARGETS      := $(TARGETS_BASE) $(TARGETS_CORR)
 
 all: $(TARGETS)
 
-Generative_models_nocorr.ipynb: Generative_models_base.ipynb
+Sequences_nocorr.ipynb: Sequences_base.ipynb
 	nbvariants --no-output $^ $@ keep
 	nbvariants $^ $(patsubst %_nocorr.ipynb,%_corr.ipynb,$@) keep_corr
 
