@@ -1,0 +1,12 @@
+.DS_Store
+cats_and_dogs/
+vaihingen-cropped/
+vaihingen-cropped-small/
+kangaroo.jpg
+model*.hdf5
+vaihingen_unet*
+unet_*.h5
+__MACOSX
+.ipynb_checkpoints/
+mini-vaihingen.zip
+pretrained_unet.h5
