@@ -14,6 +14,10 @@ wrap-up_nocorr.ipynb: wrap-up_base.ipynb
 	nbvariants --no-output $^ $@ keep
 	nbvariants $^ $(patsubst %_nocorr.ipynb,%_corr.ipynb,$@) keep_corr
 
+autodiff_nocorr.ipynb: autodiff_base.ipynb
+	nbvariants --no-output $^ $@ keep
+	nbvariants $^ $(patsubst %_nocorr.ipynb,%_corr.ipynb,$@) keep_corr
+
 %_nocorr.ipynb: %_corr.ipynb
 	nbvariants --no-output $^ $@ keep
 
