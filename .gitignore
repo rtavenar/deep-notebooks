@@ -13,3 +13,4 @@ pretrained_unet.h5
 __MACOSX/
 .ipynb_checkpoints/
 venv
+Trace.npz
